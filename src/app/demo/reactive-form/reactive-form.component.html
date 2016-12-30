@@ -1,0 +1,35 @@
+<div class="row" [hidden]="submitted">
+  <div class="col-xs-10 offset-xs-1">
+    <form novalidate (ngSubmit)="onSubmit(register)" [formGroup]="register" #form>
+      <legend>Reactive Form</legend>
+      <small>Note: input type="text" so you can see the text entered... Change to type="password" for real use.</small>
+      <div>
+        <input type="text" class="form-control" name="password" autocomplete="off" placeholder="Enter password" formControlName="password"
+          #password>
+        <strength-meter [password]="password.value" (strength)="onStrength($event)"></strength-meter>
+      </div>
+
+      <password-feedback *ngIf="register.get('password').errors?.strongPassword" [feedback]="register.get('password').errors.strongPassword.feedback">
+      </password-feedback>
+
+      <hr>
+
+      <button class="btn btn-secondary" type="submit" [disabled]="register.invalid">Submit</button>
+
+    </form>
+  </div>
+</div>
+<div class="row" [hidden]="!submitted">
+  <div class="col-xs-6 offset-xs-3">
+    <div class="card card-block text-xs-center">
+      <h3 class="card-title">You Submitted</h3>
+      <dl>
+        <dt>Password</dt>
+        <dd>{{user.password}}</dd>
+        <dt>Strength</dt>
+        <dd>{{user.strength}}</dd>
+      </dl>
+      <button class="btn btn-secondary" (click)="reset()">Reset</button>
+    </div>
+  </div>
+</div>

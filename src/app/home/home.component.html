@@ -1,0 +1,27 @@
+<div class="row">
+  <div class="col-xs-10 offset-xs-1">
+    <p>
+      A directive and validator to integrate the <a href="https://blogs.dropbox.com/tech/2012/04/zxcvbn-realistic-password-strength-estimation/">zxcvbn</a>      password strength library into your app. Examples of use with both angular appoaches to forms - <a routerLink="/template">template driven</a>      and <a routerLink="/reactive">reactive</a>.
+    </p>
+    <p>
+      You would have to be <em>really</em> keen on helping a user choose a password, as the zxcvbn library is pretty big
+      - mainly down to the dictionary it has. Perhaps lazy-load the module so it only has an impact if actually required.
+      I've done that here, although with nothing else in this app aside from the demo, there's no benefit.
+    </p>
+    <p>
+      If used, implementing zxcvbn server side as well (there are <a href="https://github.com/dropbox/zxcvbn">ports in many languages</a>)
+      is recommended.
+    </p>
+    <h4>Usage</h4>
+    <code>
+      {{example}}
+    </code>
+    <ul>
+      <li><strong>strongPassword:</strong> 0 to 4 - the level of strength required (field remains invalid until password meets
+        this level). Default = 2.
+      </li>
+      <li><strong>user_inputs:</strong> An optional array of strings that zxcvbn will treat as an extra dictionary.
+      </li>
+    </ul>
+  </div>
+</div>

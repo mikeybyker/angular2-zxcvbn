@@ -1,3 +1,18 @@
-<h1>
+<nav class="navbar navbar-fixed-top navbar-dark bg-inverse">
+  <ul class="nav navbar-nav">
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/home" routerLinkActive="active">Home</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/demo/template" routerLinkActive="active">Template Form</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/demo/reactive" routerLinkActive="active">Reactive Form</a>
+    </li>
+  </ul>
+</nav>
+<h1 class="title">
   {{title}}
 </h1>
+
+<router-outlet></router-outlet>
