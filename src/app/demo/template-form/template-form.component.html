@@ -2,7 +2,7 @@
   <div class="col-xs-10 offset-xs-1">
     <form #form="ngForm" novalidate (ngSubmit)="onSubmit(form)">
       <legend>Template Driven Form</legend>
-      <small>Note: input type="text" so you can see the text entered... Change to type="password" for real use.</small>
+      <small>Required password strength set to 3</small>
       <div>
         <input type="text" class="form-control" name="password" [ngModel]="user.password" #password="ngModel" autocomplete="off"
           placeholder="Enter password" required strongPassword="3" [user_inputs]="dictionary">
@@ -14,6 +14,9 @@
       <hr>
 
       <button class="btn btn-secondary" type="submit" [disabled]="form.invalid">Submit</button>
+      <p>
+        <small>Note: input type="text" so you can see the text entered... Change to type="password" for real use.</small>
+      </p>
 
     </form>
   </div>

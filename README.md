@@ -2,6 +2,9 @@
 
 A directive and validator to integrate the [zxcvbn](https://blogs.dropbox.com/tech/2012/04/zxcvbn-realistic-password-strength-estimation/) password strength library into your app. Examples of use with both angular appoaches to forms - template driven and reactive.
 
+[View Demo](https://mikeybyker.github.io/angular2-zxcvbn/home)
+
+
 This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.22-1.
 
 ## Development server
