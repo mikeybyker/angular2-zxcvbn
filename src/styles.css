@@ -28,3 +28,18 @@ form {
 .ng-invalid:not(form)  {
   border-left: 5px solid #a94442; /* red */
 }
+
+/* To kill new bs nav layout */
+.navbar-toggleable-md .navbar-nav {
+  flex-direction: row;
+}
+.navbar-toggleable-md .navbar-nav .nav-link {
+  padding-right: .5rem;
+  padding-left: .5rem;
+}
+@media (max-width: 992px){
+  .container {
+      margin: 0 1rem;
+  }
+
+}
